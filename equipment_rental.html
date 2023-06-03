@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Аренда ООО "ФэтСит"</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style-equipment_rental.css" />
+    <link rel="icon" href="./icon/favicon-32x32.png" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./icon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./icon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./icon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__inner">
+            <a href="index.html" class="logo">
+              <img src="./images/logo1.png" alt="" class="logo__img" />
+            </a>
+            <nav class="menu">
+              <ul class="menu__list">
+                <li class="menu__list-item">
+                  <a href="index.html" class="menu__list-link"
+                    >ГЛАВНАЯ &bigtriangledown;</a
+                  >
+                  <ul class="menu__list-item-submenu">
+                    <li><a href="services.html">УСЛУГИ</a></li>
+                  </ul>
+                </li>
+                <li class="menu__list-item">
+                  <a href="our-company.html" class="menu__list-link"
+                    >О КОМПАНИИ</a
+                  >
+                </li>
+                <li class="menu__list-item">
+                  <a
+                    href="electric-installation-work.html"
+                    class="menu__list-link"
+                    >ЭЛЕКТРОМОНТАЖНЫЕ РАБОТЫ</a
+                  >
+                </li>
+                <li class="menu__list-item">
+                  <a
+                    href="сonstruction-installation-works.html"
+                    class="menu__list-link"
+                    >СТРОИТЕЛЬНО-МОНТАЖНЫЕ РАБОТЫ</a
+                  >
+                </li>
+                <li class="menu__list-item">
+                  <a href="contacts.html" class="menu__list-link">КОНТАКТЫ</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="choose">
+          <div class="container">
+            <h2 class="section-title">Выбери свою технику</h2>
+            <div class="tabs_btn">
+              <button
+                class="tabs__btn-item tabs__btn-item--active"
+                data-button="content-1"
+              >
+                Подъемники
+              </button>
+              <button class="tabs__btn-item" data-button="content-2">
+                Экскаваторы
+              </button>
+              <button class="tabs__btn-item" data-button="content-3">
+                Буровые машины
+              </button>
+              <button class="tabs__btn-item" data-button="content-4">
+                Автокраны
+              </button>
+            </div>
+            <div class="sort-line">
+              <p class="sort-line__title">Сортировать:</p>
+              <a class="sort-link" href="#" id="sort-link"
+                ><span class="sort">по цене</span>
+                <ion-icon name="menu-outline"></ion-icon
+              ></a>
+              <a class="sort-link" href="#" id="sort-link2"
+                ><span class="sort">по грузоподъемности</span>
+                <ion-icon name="menu-outline"></ion-icon
+              ></a>
+              <a class="sort-link" href="#" id="sort-link3"
+                ><span class="sort">по диаметру бурения</span>
+                <ion-icon name="menu-outline"></ion-icon
+              ></a>
+              <a class="sort-link" href="#" id="sort-link4"
+                ><span class="sort">по высоте</span>
+                <ion-icon name="menu-outline"></ion-icon
+              ></a>
+              <a class="sort-link" href="#" id="sort-link5"
+                ><span class="sort">по умолчанию</span></a
+              >
+            </div>
+            <div class="tabs__content">
+              <div
+                class="tabs__content-item tabs__content-item--active"
+                id="content-1"
+              >
+                <div
+                  class="flip-container"
+                  data-price="3500"
+                  data-cargo="227"
+                  data-height="16"
+                >
+                  <div class="flipper">
+                    <div class="front">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img1.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="card-title">Genie Z-45/25</h4>
+                          <p class="card-text">начиная с 50000 BYN</p>
+                          <p class="card-price">3500 BYN/мес</p>
+                        </div>
+                        <a href="#" class="card-link">Аренда/Покупка</a>
+                      </div>
+                    </div>
+                    <div class="back">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img1.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="back__title">Genie Z-45/25</h4>
+                          <p class="back-text">
+                            коленчатый подъемник электрический
+                          </p>
+                          <ul class="back__list">
+                            <li class="back__list-item">
+                              Тип: коленчатый подъемник
+                            </li>
+                            <li class="back__list-item">
+                              Рабочая высота,м: 16
+                            </li>
+                            <li class="back__list-item">
+                              Грузоподъемность, кг: 227
+                            </li>
+                            <li class="back__list-item">
+                              Тип двигателя: электрический
+                            </li>
+                            <li class="back__list-item">Вес, кг: 6963</li>
+                          </ul>
+                        </div>
+                        <a href="./application.html" class="card-link"
+                          >Оставить заявку</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flip-container"
+                  data-price="2500"
+                  data-cargo="680"
+                  data-height="18"
+                >
+                  <div class="flipper">
+                    <div class="front">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img2.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="card-title">Genie GS–5390 RT</h4>
+                          <p class="card-text">начиная с 150000 BYN</p>
+                          <p class="card-price">2500 BYN/мес</p>
+                        </div>
+                        <a href="#" class="card-link">Аренда/Покупка</a>
+                      </div>
+                    </div>
+                    <div class="back">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img2.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="back__title">Genie GS–5390 RT</h4>
+                          <p class="back-text">ножничный подъемник дизельный</p>
+                          <ul class="back__list">
+                            <li class="back__list-item">
+                              Тип: ножничный подъемник
+                            </li>
+                            <li class="back__list-item">
+                              Рабочая высота,м: 18
+                            </li>
+                            <li class="back__list-item">
+                              Грузоподъемность, кг: 680
+                            </li>
+                            <li class="back__list-item">
+                              Тип двигателя: дизельный
+                            </li>
+                            <li class="back__list-item">Вес, кг: 7639</li>
+                          </ul>
+                        </div>
+                        <a href="./application.html" class="card-link"
+                          >Оставить заявку</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flip-container"
+                  data-price="2500"
+                  data-cargo="227"
+                  data-height="21"
+                >
+                  <div class="flipper">
+                    <div class="front">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img3.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="card-title">Genie Z-62/40</h4>
+                          <p class="card-text">начиная с 70000 BYN</p>
+                          <p class="card-price">2500 BYN/мес</p>
+                        </div>
+                        <a href="#" class="card-link">Аренда/Покупка</a>
+                      </div>
+                    </div>
+                    <div class="back">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img3.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="back__title">Genie Z-62/40</h4>
+                          <p class="back-text">
+                            коленчатый подъемник дизельный
+                          </p>
+                          <ul class="back__list">
+                            <li class="back__list-item">
+                              Тип: коленчатый подъемник
+                            </li>
+                            <li class="back__list-item">
+                              Рабочая высота,м: 21
+                            </li>
+                            <li class="back__list-item">
+                              Грузоподъемность, кг: 227
+                            </li>
+                            <li class="back__list-item">
+                              Тип двигателя: дизельный
+                            </li>
+                            <li class="back__list-item">Вес, кг: 10430</li>
+                          </ul>
+                        </div>
+                        <a href="./application.html" class="card-link"
+                          >Оставить заявку</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flip-container2"
+                  data-price="1500"
+                  data-cargo="227"
+                  data-height="8"
+                >
+                  <div class="flipper2">
+                    <div class="front2">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img4.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="card-title">Upright MX 19</h4>
+                          <p class="card-text">начиная с 60000 BYN</p>
+                          <p class="card-price">1500 BYN/мес</p>
+                        </div>
+                        <a href="#" class="card-link">Аренда/Покупка</a>
+                      </div>
+                    </div>
+                    <div class="back2">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img4.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="back__title">Upright MX 19</h4>
+                          <p class="back-text">
+                            ножничный подъемник электрический
+                          </p>
+                          <ul class="back__list">
+                            <li class="back__list-item">
+                              Тип: ножничный подъемник
+                            </li>
+                            <li class="back__list-item">Рабочая высота,м: 8</li>
+                            <li class="back__list-item">
+                              Грузоподъемность, кг: 227
+                            </li>
+                            <li class="back__list-item">
+                              Тип двигателя: электрический
+                            </li>
+                            <li class="back__list-item">Вес, кг: 1460</li>
+                          </ul>
+                        </div>
+                        <a href="./application.html" class="card-link"
+                          >Оставить заявку</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flip-container2"
+                  data-price="1750"
+                  data-cargo="500"
+                  data-height="18"
+                >
+                  <div class="flipper2">
+                    <div class="front2">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img-content1(1).png"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="card-title">Haulotte H 18 SX</h4>
+                          <p class="card-text">начиная с 49000 BYN</p>
+                          <p class="card-price">1750 BYN/мес</p>
+                        </div>
+                        <a href="#" class="card-link">Аренда/Покупка</a>
+                      </div>
+                    </div>
+                    <div class="back2">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img-content1(1).png"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="back__title">Haulotte H 18 SX</h4>
+                          <p class="back-text">ножничный подъемник дизельный</p>
+                          <ul class="back__list">
+                            <li class="back__list-item">
+                              Тип: ножничный подьемник
+                            </li>
+                            <li class="back__list-item">
+                              Рабочая высота,м: 18
+                            </li>
+                            <li class="back__list-item">
+                              Грузоподъемность, кг: 500
+                            </li>
+                            <li class="back__list-item">
+                              Тип двигателя: дизельный
+                            </li>
+                            <li class="back__list-item">Вес, кг: 7300</li>
+                          </ul>
+                        </div>
+                        <a href="./application.html" class="card-link"
+                          >Оставить заявку</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flip-container2"
+                  data-price="2100"
+                  data-cargo="363"
+                  data-height="14"
+                >
+                  <div class="flipper2">
+                    <div class="front2">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img-content1(2).png"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="card-title">JLG 4069 LE</h4>
+                          <p class="card-text">начиная с 46000 BYN</p>
+                          <p class="card-price">2100 BYN/мес</p>
+                        </div>
+                        <a href="#" class="card-link">Аренда/Покупка</a>
+                      </div>
+                    </div>
+                    <div class="back2">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img-content1(2).png"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="back__title">JLG 4069 LE</h4>
+                          <p class="back-text">
+                            электрический ножничный подъемник
+                          </p>
+                          <ul class="back__list">
+                            <li class="back__list-item">
+                              Тип: ножничный подъемник
+                            </li>
+                            <li class="back__list-item">
+                              Рабочая высота,м: 14
+                            </li>
+                            <li class="back__list-item">
+                              Грузоподъемность, кг: 363
+                            </li>
+                            <li class="back__list-item">
+                              Тип двигателя: электрический
+                            </li>
+                            <li class="back__list-item">Вес, кг: 4779</li>
+                          </ul>
+                        </div>
+                        <a href="./application.html" class="card-link"
+                          >Оставить заявку</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flip-container2"
+                  data-price="2230"
+                  data-cargo="680"
+                  data-height="18"
+                >
+                  <div class="flipper2">
+                    <div class="front2">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img-content1(3).jpeg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="card-title">JLG 530 LRT</h4>
+                          <p class="card-text">начиная с 47300 BYN</p>
+                          <p class="card-price">2230 BYN/мес</p>
+                        </div>
+                        <a href="#" class="card-link">Аренда/Покупка</a>
+                      </div>
+                    </div>
+                    <div class="back2">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img-content1(3).jpeg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="back__title">JLG 530 LRT</h4>
+                          <p class="back-text">ножничный подъёмник дизельный</p>
+                          <ul class="back__list">
+                            <li class="back__list-item">
+                              Тип: ножничный подъемник
+                            </li>
+                            <li class="back__list-item">
+                              Рабочая высота,м: 18
+                            </li>
+                            <li class="back__list-item">
+                              Грузоподъемность, кг: 680
+                            </li>
+                            <li class="back__list-item">
+                              Тип двигателя: дизельный
+                            </li>
+                            <li class="back__list-item">Вес, кг: 7711</li>
+                          </ul>
+                        </div>
+                        <a href="./application.html" class="card-link"
+                          >Оставить заявку</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flip-container3"
+                  data-price="2600"
+                  data-cargo="230"
+                  data-height="19"
+                >
+                  <div class="flipper3">
+                    <div class="front3">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img-content1(4).png"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="card-title">Haulotte HA 18 PX</h4>
+                          <p class="card-text">начиная с 51200 BYN</p>
+                          <p class="card-price">2600 BYN/мес</p>
+                        </div>
+                        <a href="#" class="card-link">Аренда/Покупка</a>
+                      </div>
+                    </div>
+                    <div class="back3">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img-content1(4).png"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="back__title">Haulotte HA 18 PX</h4>
+                          <p class="back-text">
+                            дизельный коленчатый подъемник
+                          </p>
+                          <ul class="back__list">
+                            <li class="back__list-item">
+                              Тип: коленчатый подъемник
+                            </li>
+                            <li class="back__list-item">
+                              Рабочая высота,м: 19
+                            </li>
+                            <li class="back__list-item">
+                              Грузоподъемность, кг: 230
+                            </li>
+                            <li class="back__list-item">
+                              Тип двигателя: дизельный
+                            </li>
+                            <li class="back__list-item">Вес, кг: 8030</li>
+                          </ul>
+                        </div>
+                        <a href="./application.html" class="card-link"
+                          >Оставить заявку</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs__content-item" id="content-2">
+                <div
+                  class="flip-container"
+                  data-price="2900"
+                  data-cargo="4638"
+                  data-height="13"
+                >
+                  <div class="flipper">
+                    <div class="front">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img2.1.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="card-title">JCB 4CX</h4>
+                          <p class="card-text">начиная с 45000 BYN</p>
+                          <p class="card-price">2900 BYN/мес</p>
+                        </div>
+                        <a href="#" class="card-link">Аренда/Покупка</a>
+                      </div>
+                    </div>
+                    <div class="back">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img2.1.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="back__title">JCB 4CX</h4>
+                          <p class="back-text">
+                            экскаватор-погрузчик дизельный
+                          </p>
+                          <ul class="back__list">
+                            <li class="back__list-item">
+                              Тип: экскаватор-погрузчик
+                            </li>
+                            <li class="back__list-item">
+                              Рабочая высота,м: 13
+                            </li>
+                            <li class="back__list-item">
+                              Грузоподъемность, кг: 4638
+                            </li>
+                            <li class="back__list-item">
+                              Тип двигателя: дизельный
+                            </li>
+                            <li class="back__list-item">Вес, кг: 8414</li>
+                          </ul>
+                        </div>
+                        <a href="./application.html" class="card-link"
+                          >Оставить заявку</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flip-container"
+                  data-price="1900"
+                  data-cargo="2592"
+                  data-height="12"
+                >
+                  <div class="flipper">
+                    <div class="front">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img2.2.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="card-title">JCB 3CX</h4>
+                          <p class="card-text">начиная с 65000 BYN</p>
+                          <p class="card-price">1900 BYN/мес</p>
+                        </div>
+                        <a href="#" class="card-link">Аренда/Покупка</a>
+                      </div>
+                    </div>
+                    <div class="back">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img2.2.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="back__title">JCB 3CX</h4>
+                          <p class="back-text">
+                            экскаватор-погрузчик дизельный
+                          </p>
+                          <ul class="back__list">
+                            <li class="back__list-item">
+                              Тип: экскаватор-погрузчик
+                            </li>
+                            <li class="back__list-item">
+                              Рабочая высота,м: 12
+                            </li>
+                            <li class="back__list-item">
+                              Грузоподъемность, кг: 2592
+                            </li>
+                            <li class="back__list-item">
+                              Тип двигателя: дизельный
+                            </li>
+                            <li class="back__list-item">Вес, кг: 7370</li>
+                          </ul>
+                        </div>
+                        <a href="./application.html" class="card-link"
+                          >Оставить заявку</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flip-container"
+                  data-price="2500"
+                  data-cargo="2670"
+                  data-height="9"
+                >
+                  <div class="flipper">
+                    <div class="front">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img2.3.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="card-title">Bobcat с ямобуром</h4>
+                          <p class="card-text">начиная с 70000 BYN</p>
+                          <p class="card-price">2500 BYN/мес</p>
+                        </div>
+                        <a href="#" class="card-link">Аренда/Покупка</a>
+                      </div>
+                    </div>
+                    <div class="back">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img2.3.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="back__title">Bobcat с ямобуром</h4>
+                          <p class="back-text">
+                            экскаватор с ямобуром дизельный
+                          </p>
+                          <ul class="back__list">
+                            <li class="back__list-item">
+                              Тип: экскаватор с ямобуром
+                            </li>
+                            <li class="back__list-item">Рабочая высота,м: 9</li>
+                            <li class="back__list-item">
+                              Грузоподъемность, кг: 2670
+                            </li>
+                            <li class="back__list-item">
+                              Тип двигателя: дизельный
+                            </li>
+                            <li class="back__list-item">Вес, кг: 6320</li>
+                          </ul>
+                        </div>
+                        <a href="./application.html" class="card-link"
+                          >Оставить заявку</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flip-container2"
+                  data-price="3600"
+                  data-cargo="18800"
+                  data-height="11"
+                >
+                  <div class="flipper2">
+                    <div class="front2">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img2.4.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="card-title">DOOSAN DX190WA</h4>
+                          <p class="card-text">начиная с 85000 BYN</p>
+                          <p class="card-price">3600 BYN/мес</p>
+                        </div>
+                        <a href="#" class="card-link">Аренда/Покупка</a>
+                      </div>
+                    </div>
+                    <div class="back2">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img2.4.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="back__title">DOOSAN DX190WA</h4>
+                          <p class="back-text">колесный экскаватор дизельный</p>
+                          <ul class="back__list">
+                            <li class="back__list-item">
+                              Тип: колесный экскаватор
+                            </li>
+                            <li class="back__list-item">
+                              Рабочая высота,м: 11
+                            </li>
+                            <li class="back__list-item">
+                              Грузоподъемность, кг: 18800
+                            </li>
+                            <li class="back__list-item">
+                              Тип двигателя: дизельный
+                            </li>
+                            <li class="back__list-item">Вес, кг: 21300</li>
+                          </ul>
+                        </div>
+                        <a href="./application.html" class="card-link"
+                          >Оставить заявку</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs__content-item" id="content-3">
+                <div
+                  class="flip-container"
+                  data-price="1400"
+                  data-diameter="152"
+                  data-height="11"
+                >
+                  <div class="flipper">
+                    <div class="front">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img3.1.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="card-title">Kaishan KT12</h4>
+                          <p class="card-text">начиная с 35000 BYN</p>
+                          <p class="card-price">1400 BYN/мес</p>
+                        </div>
+                        <a href="#" class="card-link">Аренда/Покупка</a>
+                      </div>
+                    </div>
+                    <div class="back">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img3.1.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="back__title">Kaishan KT12</h4>
+                          <p class="back-text">буровая установка дизельная</p>
+                          <ul class="back__list">
+                            <li class="back__list-item">
+                              Тип: буровая установка
+                            </li>
+                            <li class="back__list-item">
+                              Рабочая высота,м: 11
+                            </li>
+                            <li class="back__list-item">
+                              Диаметр бурения: 152 мм
+                            </li>
+                            <li class="back__list-item">
+                              Тип двигателя: дизельный
+                            </li>
+                            <li class="back__list-item">Вес, кг: 15000</li>
+                          </ul>
+                        </div>
+                        <a href="./application.html" class="card-link"
+                          >Оставить заявку</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flip-container"
+                  data-price="3000"
+                  data-diameter="125"
+                  data-height="10"
+                >
+                  <div class="flipper">
+                    <div class="front">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img3.2.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="card-title">KG430/KG430H</h4>
+                          <p class="card-text">начиная с 135000 BYN</p>
+                          <p class="card-price">3000 BYN/мес</p>
+                        </div>
+                        <a href="#" class="card-link">Аренда/Покупка</a>
+                      </div>
+                    </div>
+                    <div class="back">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img3.2.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="back__title">KG430/KG430H</h4>
+                          <p class="back-text">буровая установка дизельная</p>
+                          <ul class="back__list">
+                            <li class="back__list-item">
+                              Тип: буровая установка
+                            </li>
+                            <li class="back__list-item">
+                              Рабочая высота,м: 10
+                            </li>
+                            <li class="back__list-item">
+                              Диаметр бурения: 125 мм
+                            </li>
+                            <li class="back__list-item">
+                              Тип двигателя: дизельный
+                            </li>
+                            <li class="back__list-item">Вес, кг: 13200</li>
+                          </ul>
+                        </div>
+                        <a href="./application.html" class="card-link"
+                          >Оставить заявку</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flip-container"
+                  data-price="4000"
+                  data-diameter="180"
+                  data-height="12"
+                >
+                  <div class="flipper">
+                    <div class="front">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img3.3.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="card-title">XCMG XR160E</h4>
+                          <p class="card-text">начиная с 95000 BYN</p>
+                          <p class="card-price">4000 BYN/мес</p>
+                        </div>
+                        <a href="#" class="card-link">Аренда/Покупка</a>
+                      </div>
+                    </div>
+                    <div class="back">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img3.3.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="back__title">XCMG XR160E</h4>
+                          <p class="back-text">буровая установка дизельная</p>
+                          <ul class="back__list">
+                            <li class="back__list-item">
+                              Тип: буровая установка
+                            </li>
+                            <li class="back__list-item">
+                              Рабочая высота,м: 12
+                            </li>
+                            <li class="back__list-item">
+                              Диаметр бурения: 180 мм
+                            </li>
+                            <li class="back__list-item">
+                              Тип двигателя: дизельный
+                            </li>
+                            <li class="back__list-item">Вес, кг: 15200</li>
+                          </ul>
+                        </div>
+                        <a href="./application.html" class="card-link"
+                          >Оставить заявку</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flip-container2"
+                  data-price="2200"
+                  data-diameter="165"
+                  data-height="11"
+                >
+                  <div class="flipper2">
+                    <div class="front2">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img3.4.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="card-title">KAISHAN KG940A/D</h4>
+                          <p class="card-text">начиная с 65000 BYN</p>
+                          <p class="card-price">2200 BYN/мес</p>
+                        </div>
+                        <a href="#" class="card-link">Аренда/Покупка</a>
+                      </div>
+                    </div>
+                    <div class="back2">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img3.4.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="back__title">KAISHAN KG940A/D</h4>
+                          <p class="back-text">буровая установка дизельная</p>
+                          <ul class="back__list">
+                            <li class="back__list-item">
+                              Тип: буровая установка
+                            </li>
+                            <li class="back__list-item">
+                              Рабочая высота,м: 11
+                            </li>
+                            <li class="back__list-item">
+                              Диаметр бурения: 165 мм
+                            </li>
+                            <li class="back__list-item">
+                              Тип двигателя: дизельный
+                            </li>
+                            <li class="back__list-item">Вес, кг: 9900</li>
+                          </ul>
+                        </div>
+                        <a href="./application.html" class="card-link"
+                          >Оставить заявку</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs__content-item" id="content-4">
+                <div
+                  class="flip-container"
+                  data-price="2100"
+                  data-cargo="25000"
+                  data-height="31"
+                >
+                  <div class="flipper">
+                    <div class="front">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img4.1.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="card-title">KC-45717K-1</h4>
+                          <p class="card-text">начиная с 86000 BYN</p>
+                          <p class="card-price">2100 BYN/мес</p>
+                        </div>
+                        <a href="#" class="card-link">Аренда/Покупка</a>
+                      </div>
+                    </div>
+                    <div class="back">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img4.1.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="back__title">KC-45717K-1</h4>
+                          <p class="back-text">автокран дизельный</p>
+                          <ul class="back__list">
+                            <li class="back__list-item">Тип: автокран</li>
+                            <li class="back__list-item">
+                              Рабочая высота,м: 31
+                            </li>
+                            <li class="back__list-item">
+                              Грузоподъемность,кг: 25000
+                            </li>
+                            <li class="back__list-item">
+                              Тип двигателя: дизельный
+                            </li>
+                            <li class="back__list-item">Вес, кг: 21650</li>
+                          </ul>
+                        </div>
+                        <a href="./application.html" class="card-link"
+                          >Оставить заявку</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flip-container"
+                  data-price="2800"
+                  data-cargo="23500"
+                  data-height="32"
+                >
+                  <div class="flipper">
+                    <div class="front">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img4.2.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="card-title">KC-45717K-3P 6X6</h4>
+                          <p class="card-text">начиная с 120000 BYN</p>
+                          <p class="card-price">2800 BYN/мес</p>
+                        </div>
+                        <a href="#" class="card-link">Аренда/Покупка</a>
+                      </div>
+                    </div>
+                    <div class="back">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img4.2.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="back__title">KC-45717K-3P 6X6</h4>
+                          <p class="back-text">автокран дизельный</p>
+                          <ul class="back__list">
+                            <li class="back__list-item">Тип: автокран</li>
+                            <li class="back__list-item">
+                              Рабочая высота,м: 32
+                            </li>
+                            <li class="back__list-item">
+                              Грузоподъемность,кг: 23500
+                            </li>
+                            <li class="back__list-item">
+                              Тип двигателя: дизельный
+                            </li>
+                            <li class="back__list-item">Вес, кг: 22100</li>
+                          </ul>
+                        </div>
+                        <a href="./application.html" class="card-link"
+                          >Оставить заявку</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flip-container"
+                  data-price="2150"
+                  data-cargo="32000"
+                  data-height="30"
+                >
+                  <div class="flipper">
+                    <div class="front">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img4.3.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="card-title">KC-55729-1B</h4>
+                          <p class="card-text">начиная с 77000 BYN</p>
+                          <p class="card-price">2150 BYN/мес</p>
+                        </div>
+                        <a href="#" class="card-link">Аренда/Покупка</a>
+                      </div>
+                    </div>
+                    <div class="back">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img4.3.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="back__title">KC-55729-1B</h4>
+                          <p class="back-text">автокран дизельный</p>
+                          <ul class="back__list">
+                            <li class="back__list-item">Тип: автокран</li>
+                            <li class="back__list-item">
+                              Рабочая высота,м: 30
+                            </li>
+                            <li class="back__list-item">
+                              Грузоподъемность,кг: 32000
+                            </li>
+                            <li class="back__list-item">
+                              Тип двигателя: дизельный
+                            </li>
+                            <li class="back__list-item">Вес, кг: 21750</li>
+                          </ul>
+                        </div>
+                        <a href="./application.html" class="card-link"
+                          >Оставить заявку</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="flip-container2"
+                  data-price="4100"
+                  data-cargo="33100"
+                  data-height="36"
+                >
+                  <div class="flipper2">
+                    <div class="front2">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img4.4.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="card-title">КС-65721-2</h4>
+                          <p class="card-text">начиная с 97000 BYN</p>
+                          <p class="card-price">4100 BYN/мес</p>
+                        </div>
+                        <a href="#" class="card-link">Оставить заявку</a>
+                      </div>
+                    </div>
+                    <div class="back2">
+                      <div class="card">
+                        <img
+                          class="card-img"
+                          src="./images/card-img4.3.jpg"
+                          alt=""
+                        />
+                        <div class="card__content">
+                          <h4 class="back__title">КС-65721-2</h4>
+                          <p class="back-text">автокран дизельный</p>
+                          <ul class="back__list">
+                            <li class="back__list-item">Тип: автокран</li>
+                            <li class="back__list-item">
+                              Рабочая высота,м: 36
+                            </li>
+                            <li class="back__list-item">
+                              Грузоподъемность,кг: 33100
+                            </li>
+                            <li class="back__list-item">
+                              Тип двигателя: дизельный
+                            </li>
+                            <li class="back__list-item">Вес, кг: 22900</li>
+                          </ul>
+                        </div>
+                        <a href="./application.html" class="card-link"
+                          >Оставить заявку</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="blog">
+          <div class="container">
+            <div class="blog__items">
+              <div class="blog__item">
+                <img src="./images/blog-1.jpg" alt="" class="blog__item-img" />
+                <h4 class="blog__item-title">Как удачно построить дом</h4>
+                <a
+                  href="https://www.topdom.info/economics27/"
+                  class="blog__item-link"
+                  target="_blank"
+                  >подробнее</a
+                >
+              </div>
+              <div class="blog__item">
+                <img src="./images/blog-2.jpg" alt="" class="blog__item-img" />
+                <h4 class="blog__item-title">Грамотный подбор материалов</h4>
+                <a
+                  href="https://rubryka.com/ru/2023/02/28/vybrat-stroytelnye-materyaly/"
+                  class="blog__item-link"
+                  target="_blank"
+                  >подробнее</a
+                >
+              </div>
+            </div>
+            <a
+              href="http://www.byrenergo.ru/articles.html"
+              target="_blank"
+              class="showmore-link"
+              >ПОКАЗАТЬ БОЛЬШЕ</a
+            >
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <nav class="footer__menu">
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <p class="footer__menu-title">Аренда</p>
+              </li>
+              <li class="footer__menu-item">
+                <a href="equipment_rental.html" class="footer__menu-link"
+                  >Подъемники</a
+                >
+              </li>
+              <li class="footer__menu-item">
+                <a href="equipment_rental.html" class="footer__menu-link"
+                  >Экскаваторы</a
+                >
+              </li>
+              <li class="footer__menu-item">
+                <a href="equipment_rental.html" class="footer__menu-link"
+                  >Буровые машины</a
+                >
+              </li>
+              <li class="footer__menu-item">
+                <a href="equipment_rental.html" class="footer__menu-link"
+                  >Автокраны</a
+                >
+              </li>
+            </ul>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <p class="footer__menu-title">Услуги</p>
+              </li>
+              <li class="footer__menu-item">
+                <a href="gnb.html" class="footer__menu-link"
+                  >Горизонтальное направленное бурение</a
+                >
+              </li>
+              <li class="footer__menu-item">
+                <a
+                  href="electric-installation-work.html"
+                  class="footer__menu-link"
+                  >Электромонтажные работы</a
+                >
+              </li>
+              <li class="footer__menu-item">
+                <a
+                  href="сonstruction-installation-works.html"
+                  class="footer__menu-link"
+                  >Строительно-монтажные работы</a
+                >
+              </li>
+            </ul>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <p class="footer__menu-title">Соц.сети</p>
+              </li>
+              <li class="footer__menu-item">
+                <a
+                  href="https://vk.com/id363637654"
+                  class="footer__menu-link"
+                  target="_blank"
+                  >ВК</a
+                >
+              </li>
+              <li class="footer__menu-item">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100022752993089&paipv=0&eav=AfawwzrsLKjDAAC8cSS3DjLYDgnJCxetv0fD_6FfVkNzHxUomYp41_kUJtIxczQc8Bk&_rdr"
+                  class="footer__menu-link"
+                  target="_blank"
+                  >FACEBOOK</a
+                >
+              </li>
+            </ul>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <p class="footer__menu-title">О нас</p>
+              </li>
+              <li class="footer__menu-item">
+                <a href="our-company.html" class="footer__menu-link"
+                  >Информация</a
+                >
+              </li>
+              <li class="footer__menu-item">
+                <a href="our-company.html" class="footer__menu-link"
+                  >Контакты для связи</a
+                >
+              </li>
+              <li class="footer__menu-item">
+                <a href="our-company.html" class="footer__menu-link"
+                  >Наше расположение</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="footer__copy">
+            <p class="footer__copy-text">
+              Строительная компания "ФэтСит" - это профессиональная команда
+              строителей, которая оказывает услуги по строительству и ремонту
+              жилых и коммерческих объектов в городе. Наша компания имеет
+              богатый опыт в области строительства и работает только с
+              высококачественными материалами, что гарантирует долговечность и
+              надежность наших объектов. Мы предлагаем полный комплекс услуг -
+              от разработки дизайн-проектов до проведения финальных отделочных
+              работ.
+            </p>
+            <p class="footer__copy-text">
+              Наши специалисты всегда готовы выслушать пожелания и требования
+              наших клиентов и предложить наилучшие решения для реализации
+              проекта. Мы предлагаем полный комплекс услуг - от разработки
+              дизайн-проектов до проведения финальных отделочных работ. Наши
+              специалисты всегда готовы выслушать пожелания и требования наших
+              клиентов и предложить наилучшие решения для реализации проекта.
+            </p>
+          </div>
+          <nav class="copy__nav">
+            <ul class="copy__nav-list">
+              <li class="copy__nav-item">
+                <a href="#" class="copy__nav-link">Условия использования</a>
+              </li>
+              <li class="copy__nav-item">
+                <a href="#" class="copy__nav-link"
+                  >Политика конфиденциальности</a
+                >
+              </li>
+              <li class="copy__nav-item">
+                <a href="#" class="copy__nav-link"
+                  >Не продавать мою личную информацию</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="back-to-top">
+          <a href="#" class="arrow"
+            ><img class="fas fa-arrow-up" src="./images/up-arrow.png" alt=""
+          /></a>
+        </div>
+      </footer>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="js/rental.js"></script>
+    <script>
+      // Общая функция сортировки по указанному атрибуту
+      function mySort(contentId, attribute) {
+        let content = document.getElementById(contentId);
+        const result = Array.from(content.children).sort((a, b) => {
+          const valueA = Number(a.getAttribute(attribute));
+          const valueB = Number(b.getAttribute(attribute));
+          if (valueA > valueB) {
+            return -1;
+          } else {
+            return 1;
+          }
+        });
+        content.innerHTML = "";
+        for (const elem of result) {
+          content.appendChild(elem);
+        }
+      }
+      document.querySelector("#sort-link").onclick = function () {
+        const activeContentId = document.querySelector(
+          ".tabs__content-item--active"
+        ).id;
+        if (
+          activeContentId === "content-1" ||
+          activeContentId === "content-2" ||
+          activeContentId === "content-3" ||
+          activeContentId === "content-4"
+        ) {
+          mySort(activeContentId, "data-price");
+        }
+      };
+      document.querySelector("#sort-link2").onclick = function () {
+        const activeContentId = document.querySelector(
+          ".tabs__content-item--active"
+        ).id;
+        if (
+          activeContentId === "content-1" ||
+          activeContentId === "content-2" ||
+          activeContentId === "content-3" ||
+          activeContentId === "content-4"
+        ) {
+          mySort(activeContentId, "data-cargo");
+        }
+      };
+      document.querySelector("#sort-link3").onclick = function () {
+        const activeContentId = document.querySelector(
+          ".tabs__content-item--active"
+        ).id;
+        if (activeContentId === "content-3") {
+          mySort(activeContentId, "data-diameter");
+        }
+      };
+      document.querySelector("#sort-link4").onclick = function () {
+        const activeContentId = document.querySelector(
+          ".tabs__content-item--active"
+        ).id;
+        if (
+          activeContentId === "content-1" ||
+          activeContentId === "content-2" ||
+          activeContentId === "content-3" ||
+          activeContentId === "content-4"
+        ) {
+          mySort(activeContentId, "data-height");
+        }
+      };
+      document
+        .querySelector("#content-1")
+        .classList.add("tabs__content-item--active");
+      document
+        .querySelectorAll(".tabs__content-item")
+        .forEach(function (contentItem) {
+          contentItem.onclick = function () {
+            document
+              .querySelector(".tabs__content-item--active")
+              .classList.remove("tabs__content-item--active");
+            contentItem.classList.add("tabs__content-item--active");
+          };
+        });
+      function insertAfter(elem, refElem) {
+        return refElem.parentNot.insertBefore(elem, refElem.nextSibling);
+      }
+    </script>
+  </body>
+</html>

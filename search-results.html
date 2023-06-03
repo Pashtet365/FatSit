@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ФэтСит - Результаты поиска</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./icon/favicon-32x32.png" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./icon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./icon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./icon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./icon/site.webmanifest" />
+  </head>
+  <body class="body-search">
+    <div class="container">
+      <h1 class="search-title">Результаты поиска:</h1>
+      <div id="search-results"></div>
+      <script>
+        function getResultsCountText(count) {
+          var cases = [2, 0, 1, 1, 1, 2]
+          var forms = ["результат", "результата", "результатов"]
+          var index
+          if (count % 100 > 4 && count % 100 < 20) {
+            index = 2
+          } else {
+            index = cases[count % 10 < 5 ? count % 10 : 5]
+          }
+          return count + " " + forms[index] + " найдено"
+        }
+        window.addEventListener("DOMContentLoaded", function () {
+          var searchQuery = new URLSearchParams(window.location.search).get(
+            "query"
+          )
+          var pages = [
+            { url: "index.html", title: "Главная страница" },
+            {
+              url: "construction-installation-works.html",
+              title: "Строительно-монтажные работы",
+            },
+            { url: "application.html", title: "Оставить заявку" },
+            {
+              url: "electric-installation-work.html",
+              title: "Электромонтажные работы",
+            },
+            {
+              url: "equipment_rental.html",
+              title: "Аренда и продажа техники",
+            },
+            {
+              url: "gnb.html",
+              title: "Горизонтально-направленное бурение",
+            },
+            { url: "our-company.html", title: "ФэтСит - О комании" },
+            { url: "services.html", title: "ФэтСит - Услуги" },
+          ]
+          var searchResults = []
+          pages.forEach(function (page) {
+            if (page.url !== "search-results.html") {
+              var request = new XMLHttpRequest()
+              request.open("GET", page.url, false)
+              request.send()
+
+              if (request.status === 200) {
+                var pageContent = request.responseText.toLowerCase()
+                if (pageContent.includes(searchQuery.toLowerCase())) {
+                  searchResults.push(page)
+                }
+              }
+            }
+          })
+          var searchResultsDiv = document.getElementById("search-results")
+          if (searchResults.length > 0) {
+            var resultsCount = searchResults.length
+            var resultsText =
+              getResultsCountText(resultsCount) + ' для "' + searchQuery + '"'
+            var resultsCountText = document.createTextNode(resultsText)
+            searchResultsDiv.appendChild(resultsCountText)
+
+            var resultsList = document.createElement("ul")
+            searchResultsDiv.appendChild(resultsList)
+
+            searchResults.forEach(function (result) {
+              var listItem = document.createElement("li")
+              var link = document.createElement("a")
+              link.href = result.url
+              link.textContent = result.title
+              listItem.appendChild(link)
+              resultsList.appendChild(listItem)
+            })
+          } else {
+            var noResultsText =
+              'По результату поиска "' + searchQuery + '" ничего не найдено!'
+            var noResultsMessage = document.createTextNode(noResultsText)
+            searchResultsDiv.appendChild(noResultsMessage)
+          }
+        })
+      </script>
+    </div>
+  </body>
+</html>

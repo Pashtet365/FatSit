@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>ФэтСит - Оставить заявку</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.9/jquery.inputmask.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="icon" href="./icon/favicon-32x32.png" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./icon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./icon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./icon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./icon/site.webmanifest" />
+  </head>
+  <body>
+    <form action="./php/addmessage.php" method="POST">
+      <div class="section-form">
+        <h2 class="form-title">Заявка на аренду</h2>
+        <div class="close-button">✖</div>
+      </div>
+      <p>Имя</p>
+      <input
+        type="text"
+        name="name"
+        style="display: block"
+        placeholder="Введите имя"
+      />
+      <p>Телефон</p>
+      <input
+        type="text"
+        id="phone"
+        name="phone"
+        style="display: block"
+        placeholder="+375(00)000-00-00"
+      />
+      <p>Комментарий</p>
+      <textarea
+        name="content"
+        cols="20"
+        rows="5"
+        placeholder="Введите комментарий по заявке"
+      ></textarea>
+      <input class="btn" type="submit" value="Отправить" />
+      <p class="form-link">
+        Нажимая «Оставить заявку», вы даёте согласие на обработку своих
+        <a href="#"><span> персональных данных </span></a>.
+      </p>
+    </form>
+    <script src="./js/addmessage.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#phone").inputmask("+375(99)999-99-99")
+
+        $("form").submit(function (e) {
+          var operatorCode = $("#phone").val().substring(5, 7)
+          var allowedCodes = ["25", "29", "33", "44"]
+
+          if (!allowedCodes.includes(operatorCode)) {
+            e.preventDefault()
+            alert("Неверный код оператора! Пожалуйста, введите допустимый код.")
+          }
+        })
+      })
+    </script>
+  </body>
+</html>

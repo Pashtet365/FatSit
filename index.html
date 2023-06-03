@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cтроительная компания ООО "ФэтСит"</title>
+    <script src="search.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style-login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="icon" href="./icon/favicon-32x32.png" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./icon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./icon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./icon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./icon/site.webmanifest" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header header-main">
+        <div class="container">
+          <div class="header__inner">
+            <a href="index.html" class="logo">
+              <img src="./images/logo1.png" alt="" class="logo__img" />
+            </a>
+            <nav class="menu">
+              <ul class="menu__list">
+                <li class="menu__list-item has-submenu">
+                  <a href="#" class="menu__list-link"
+                    >ГЛАВНАЯ &bigtriangledown;</a
+                  >
+                  <ul class="menu__list-item-submenu">
+                    <li><a href="services.html">УСЛУГИ</a></li>
+                  </ul>
+                </li>
+                <li class="menu__list-item">
+                  <a href="our-company.html" class="menu__list-link"
+                    >О КОМПАНИИ</a
+                  >
+                </li>
+                <li class="menu__list-item">
+                  <a
+                    href="electric-installation-work.html"
+                    class="menu__list-link"
+                    >ЭЛЕКТРОМОНТАЖНЫЕ РАБОТЫ</a
+                  >
+                </li>
+                <li class="menu__list-item">
+                  <a
+                    href="сonstruction-installation-works.html"
+                    class="menu__list-link"
+                    >СТРОИТЕЛЬНО-МОНТАЖНЫЕ РАБОТЫ</a
+                  >
+                </li>
+                <li class="menu__list-item">
+                  <a
+                    href="#"
+                    class="menu__list-link btnLoginLink"
+                    id="loginLink"
+                    >ВОЙТИ</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Поиск по сайту"
+            maxlength="50"
+          />
+          <script>
+            document
+              .querySelector(".search-input")
+              .addEventListener("keyup", function (event) {
+                if (event.key === "Enter") {
+                  var searchQuery =
+                    document.querySelector(".search-input").value;
+                  window.location.href =
+                    "search-results.html?query=" +
+                    encodeURIComponent(searchQuery);
+                }
+              });
+          </script>
+        </div>
+      </header>
+      <main class="main">
+        <section class="top">
+          <div class="container">
+            <h1 class="title">Мы оказываем полный спектр строительных услуг</h1>
+            <a class="top-link" href="equipment_rental.html"
+              ><span>АРЕНДА ТЕХНИКИ</span></a
+            >
+          </div>
+          <div class="wrapper-form">
+            <span class="icon-close"
+              ><ion-icon name="close-outline"></ion-icon
+            ></span>
+            <div class="form-box login">
+              <h2>ВОЙТИ</h2>
+              <form action="./php/login.php" method="POST">
+                <div class="input-box">
+                  <span class="icon"><ion-icon name="person"></ion-icon></span>
+                  <input
+                    type="text"
+                    name="login"
+                    maxlength="20"
+                    required
+                    autocomplete="off"
+                  />
+                  <label>Логин</label>
+                </div>
+                <div class="input-box">
+                  <span class="icon"
+                    ><ion-icon name="lock-closed"></ion-icon
+                  ></span>
+                  <input
+                    type="password"
+                    name="password"
+                    maxlength="15"
+                    required
+                    autocomplete="off"
+                  />
+                  <label>Пароль</label>
+                </div>
+                <div class="remember-forgot">
+                  <label><input type="checkbox" />Запомнить меня</label>
+                </div>
+                <div class="login-register">
+                  <button type="submit" class="btn">Войти</button>
+                  <p>
+                    Нету аккаунта?<a href="#" class="register-link"
+                      >Регистрация</a
+                    >
+                  </p>
+                </div>
+              </form>
+            </div>
+            <div class="form-box register">
+              <h2>Регистрация</h2>
+              <form action="./php/register.php" method="POST">
+                <div class="input-box">
+                  <span class="icon"><ion-icon name="person"></ion-icon></span>
+                  <input
+                    type="text"
+                    name="login"
+                    maxlength="20"
+                    required
+                    autocomplete="off"
+                  />
+                  <label>Логин</label>
+                </div>
+                <div class="input-box">
+                  <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                  <input
+                    type="email"
+                    name="email"
+                    maxlength="30"
+                    required
+                    autocomplete="off"
+                  />
+                  <label>Email</label>
+                  <span class="error" id="emailError" style="display: none"
+                    >Некорректный формат email</span
+                  >
+                </div>
+                <div class="input-box">
+                  <span class="icon"
+                    ><ion-icon name="lock-closed"></ion-icon
+                  ></span>
+                  <input
+                    type="password"
+                    name="password"
+                    maxlength="15"
+                    required
+                    autocomplete="off"
+                  />
+                  <label>Пароль</label>
+                </div>
+                <div class="remember-forgot">
+                  <label
+                    ><input type="checkbox" />Я согласен с правилами и
+                    условиями</label
+                  >
+                </div>
+                <div class="login-register">
+                  <button type="submit" class="btn">Зарегистрироваться</button>
+                  <p>Есть аккаунт?<a href="#" class="login-link">Войти</a></p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <div class="slider">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide"
+                style="background-image: url(./images/slide-1.jpg)"
+              ></div>
+              <div
+                class="swiper-slide"
+                style="background-image: url(./images/slide2.jpg)"
+              ></div>
+              <div
+                class="swiper-slide"
+                style="background-image: url(./images/slide3.jpg)"
+              ></div>
+              <div
+                class="swiper-slide"
+                style="background-image: url(./images/slide4.jpg)"
+              ></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <section class="why-fetsit">
+          <div class="container">
+            <h2 class="section-title">Почему именно ФэтСит?</h2>
+            <ul class="why-fetsit__list">
+              <li class="why-fetsit__item">
+                <img
+                  class="why-fetsit__item-img"
+                  src="./images/why-fetsit-1.png"
+                  alt=""
+                />
+                <h3 class="why-fetsit__item-title">Отличные работники</h3>
+                <p class="why-fetsit__item-text">
+                  Сертифицированные работники компании ФэтСит ручаются за вашу
+                  работу, предлагая лучшие услуги.
+                </p>
+              </li>
+              <li class="why-fetsit__item">
+                <img
+                  class="why-fetsit__item-img"
+                  src="./images/why-fetsit-2.png"
+                  alt=""
+                />
+                <h3 class="why-fetsit__item-title">Цены со скидками</h3>
+                <p class="why-fetsit__item-text">
+                  Просмотрите местный выбор услуг, не выходя из дома, и получите
+                  доступ к гарантированной экономии на выбранной услуге наших
+                  работников по вашему выбору.
+                </p>
+              </li>
+              <li class="why-fetsit__item">
+                <img
+                  class="why-fetsit__item-img"
+                  src="./images/why-fetsit-3.png"
+                  alt=""
+                />
+                <h3 class="why-fetsit__item-title">Низкие платежи</h3>
+                <p class="why-fetsit__item-text">
+                  В нашей компании имеется возможность оплаты выбранной услуги
+                  по частям, после выполнения работы с нашей стороны.
+                </p>
+              </li>
+              <li class="why-fetsit__item">
+                <img
+                  class="why-fetsit__item-img"
+                  src="./images/why-fetsit-4.png"
+                  alt=""
+                />
+                <h3 class="why-fetsit__item-title">Гарантия</h3>
+                <p class="why-fetsit__item-text">
+                  У нас лучшее качество строительных и ремонтных работ, но если
+                  клиенту что либо не понравится, полный возврат средств и
+                  компенсация за счет компании.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="how-does">
+          <div class="container">
+            <div class="how-does__inner">
+              <h2 class="section-title">Как работает строительная компания?</h2>
+              <p class="how-does__text">
+                Деятельность строительной компании заключается в выполнении
+                различных работ, связанных со строительством зданий и
+                сооружений. Она может заниматься как возведением новых объектов,
+                так и ремонтом и реконструкцией уже существующих. Строительная
+                компания обычно заключает договор с заказчиком на выполнение
+                определенного объема работ. В этом договоре прописываются все
+                условия, такие как стоимость работ, сроки их выполнения, а также
+                требования к качеству выполняемых работ. Чтобы начать выполнение
+                работ, строительная компания обычно закупает необходимые
+                строительные материалы и инструменты. При необходимости она
+                может также арендовать специализированную технику, такую как
+                краны, экскаваторы и т.д.
+              </p>
+              <h4 class="how__does-title">
+                При работе строительной компании с клиентом существуют правила,
+                которые необходимо учитывать:
+              </h4>
+              <ol class="how__does-list">
+                <li class="how__does-item">
+                  Внимательно ознакомьтесь с условиями договора. Важно
+                  внимательно изучить все пункты договора
+                </li>
+                <li class="how__does-item">
+                  Соблюдайте условия договора. Как только вы подписали договор,
+                  важно строго соблюдать все его условия
+                </li>
+                <li class="how__does-item">
+                  Оплачивайте работы вовремя. Важно оплачивать выполненные
+                  работы вовремя и в полном объеме, согласно условиям договора
+                </li>
+              </ol>
+              <p class="how-does__text">
+                Договор необходим для того, чтобы установить четкие правила и
+                условия, по которым будут проводиться работы, а также определить
+                ответственность за возможные нарушения. Он позволяет уменьшить
+                возможные риски и конфликты между сторонами в ходе выполнения
+                работ.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="video-presetnation">
+          <div class="container">
+            <h2 class="section-title video__title">
+              ДОБРО ПОЖАЛОВАТЬ В ФЭТСИТ
+            </h2>
+            <p class="video__text">Узнайте, как работает наша компания</p>
+            <iframe
+              class="video__content"
+              width="1000"
+              height="500"
+              src="https://www.youtube.com/embed/-euDGRWywc0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </section>
+        <section class="photo-gallery">
+          <div class="container">
+            <h2 class="section-title photo-gallery-title">Наша фотогалерея</h2>
+            <p class="photo-gallery__text">
+              Фотогалерея на нашем сайте представляет собой коллекцию фотографий
+              наших успешно завершенных и проведенных проектов
+            </p>
+            <ul class="photo-gallery__list">
+              <li class="photo-gallery-item">
+                <img
+                  class="photo-gallery__item-img"
+                  src="./images/imp-1.jpg"
+                  alt=""
+                  width="270"
+                  height="150"
+                />
+                <p class="photo-gallery__item-text">
+                  ГНБ - Горизонтально - направленное бурение
+                </p>
+              </li>
+              <li class="photo-gallery-item">
+                <img
+                  class="photo-gallery__item-img"
+                  src="./images/imp-2.jpg"
+                  alt=""
+                  width="270"
+                  height="150"
+                />
+                <p class="photo-gallery__item-text">Электромонтажные работы</p>
+              </li>
+              <li class="photo-gallery-item">
+                <img
+                  class="photo-gallery__item-img"
+                  src="./images/imp-3.jpg"
+                  alt=""
+                  width="270"
+                  height="150"
+                />
+                <p class="photo-gallery__item-text">
+                  Строительно-монтажные работы
+                </p>
+              </li>
+              <li class="photo-gallery-item">
+                <img
+                  class="photo-gallery__item-img"
+                  src="./images/imp-4(1).jpg"
+                  alt=""
+                  width="270"
+                  height="150"
+                />
+                <p class="photo-gallery__item-text">
+                  Электрощитовое оборудование
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <nav class="footer__menu">
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <p class="footer__menu-title">Аренда</p>
+              </li>
+              <li class="footer__menu-item">
+                <a href="equipment_rental.html" class="footer__menu-link"
+                  >Подъемники</a
+                >
+              </li>
+              <li class="footer__menu-item">
+                <a href="equipment_rental.html" class="footer__menu-link"
+                  >Экскаваторы</a
+                >
+              </li>
+              <li class="footer__menu-item">
+                <a href="equipment_rental.html" class="footer__menu-link"
+                  >Буровые машины</a
+                >
+              </li>
+              <li class="footer__menu-item">
+                <a href="equipment_rental.html" class="footer__menu-link"
+                  >Автокраны</a
+                >
+              </li>
+            </ul>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <p class="footer__menu-title">Услуги</p>
+              </li>
+              <li class="footer__menu-item">
+                <a href="gnb.html" class="footer__menu-link"
+                  >Горизонтальное направленное бурение</a
+                >
+              </li>
+              <li class="footer__menu-item">
+                <a
+                  href="electric-installation-work.html"
+                  class="footer__menu-link"
+                  >Электромонтажные работы</a
+                >
+              </li>
+              <li class="footer__menu-item">
+                <a
+                  href="сonstruction-installation-works.html"
+                  class="footer__menu-link"
+                  >Строительно-монтажные работы</a
+                >
+              </li>
+            </ul>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <p class="footer__menu-title">Соц.сети</p>
+              </li>
+              <li class="footer__menu-item">
+                <a
+                  href="https://vk.com/id363637654"
+                  class="footer__menu-link"
+                  target="_blank"
+                  >ВК</a
+                >
+              </li>
+              <li class="footer__menu-item">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100022752993089&paipv=0&eav=AfawwzrsLKjDAAC8cSS3DjLYDgnJCxetv0fD_6FfVkNzHxUomYp41_kUJtIxczQc8Bk&_rdr"
+                  class="footer__menu-link"
+                  target="_blank"
+                  >FACEBOOK</a
+                >
+              </li>
+            </ul>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <p class="footer__menu-title">О нас</p>
+              </li>
+              <li class="footer__menu-item">
+                <a href="our-company.html" class="footer__menu-link"
+                  >Информация</a
+                >
+              </li>
+              <li class="footer__menu-item">
+                <a href="our-company.html" class="footer__menu-link"
+                  >Контакты для связи</a
+                >
+              </li>
+              <li class="footer__menu-item">
+                <a href="our-company.html" class="footer__menu-link"
+                  >Наше расположение</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="footer__copy">
+            <p class="footer__copy-text">
+              Строительная компания "ФэтСит" - это профессиональная команда
+              строителей, которая оказывает услуги по строительству и ремонту
+              жилых и коммерческих объектов в городе. Наша компания имеет
+              богатый опыт в области строительства и работает только с
+              высококачественными материалами, что гарантирует долговечность и
+              надежность наших объектов. Мы предлагаем полный комплекс услуг -
+              от разработки дизайн-проектов до проведения финальных отделочных
+              работ.
+            </p>
+            <p class="footer__copy-text">
+              Наши специалисты всегда готовы выслушать пожелания и требования
+              наших клиентов и предложить наилучшие решения для реализации
+              проекта. Мы предлагаем полный комплекс услуг - от разработки
+              дизайн-проектов до проведения финальных отделочных работ. Наши
+              специалисты всегда готовы выслушать пожелания и требования наших
+              клиентов и предложить наилучшие решения для реализации проекта.
+            </p>
+          </div>
+          <nav class="copy__nav">
+            <ul class="copy__nav-list">
+              <li class="copy__nav-item">
+                <a href="#" class="copy__nav-link">Условия использования</a>
+              </li>
+              <li class="copy__nav-item">
+                <a href="#" class="copy__nav-link"
+                  >Политика конфиденциальности</a
+                >
+              </li>
+              <li class="copy__nav-item">
+                <a href="#" class="copy__nav-link"
+                  >Не продавать мою личную информацию</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="back-to-top">
+          <a href="#" class="arrow"
+            ><img class="fas fa-arrow-up" src="./images/up-arrow.png" alt=""
+          /></a>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
